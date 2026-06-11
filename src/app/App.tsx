@@ -380,7 +380,7 @@ function App() {
                 className="font-light text-white/75"
                 style={{ fontSize: 18, lineHeight: 1.6, maxWidth: 380 }}
               >
-              bg-[#000000c4]   Browse hundreds of certified pre-owned vehicles — inspected, verified, and priced fairly for the UAE market.
+              Browse hundreds of certified pre-owned vehicles — inspected, verified, and priced fairly for the UAE market.
               </p>
               <div>
                 <a

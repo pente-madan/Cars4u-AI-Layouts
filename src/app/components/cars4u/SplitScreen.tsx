@@ -40,7 +40,7 @@ export function SplitScreen() {
               maxWidth: 440,
             }}
           >
-            Find Your Perfect Car
+            Find Your Perfect Premium Car
           </h2>
           <p
             className="text-center"
@@ -117,7 +117,7 @@ export function SplitScreen() {
               maxWidth: 380,
             }}
           >
-            Sell your vehicle the easy way — get a fair valuation and a fast,
+            Sell your vehicle the easy way get a fair valuation and a fast,
             hassle-free deal.
           </p>
           <button
