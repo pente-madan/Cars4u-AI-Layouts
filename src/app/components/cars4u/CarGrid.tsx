@@ -19,7 +19,7 @@ const cars: Car[] = [
     fuel: "Petrol",
     price: "AED 285,000",
     image:
-      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=500&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1566479171817-2698c7b43a1d?w=800&h=500&fit=crop&q=80",
   },
   {
     id: "patrol",
@@ -28,7 +28,7 @@ const cars: Car[] = [
     fuel: "Diesel",
     price: "AED 198,000",
     image:
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=500&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1605515298946-d06295c7bb28?w=800&h=500&fit=crop&q=80",
   },
   {
     id: "bmw",
@@ -46,7 +46,7 @@ const cars: Car[] = [
     fuel: "Petrol",
     price: "AED 210,000",
     image:
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&h=500&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=500&fit=crop&q=80",
   },
   {
     id: "civic",
@@ -55,16 +55,16 @@ const cars: Car[] = [
     fuel: "Petrol",
     price: "AED 88,000",
     image:
-      "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?w=800&h=500&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1623869675781-80aa31012a5a?w=800&h=500&fit=crop&q=80",
   },
   {
-    id: "tucson",
-    name: "Hyundai Tucson",
-    meta: "2022 · 35,000 km · Automatic",
-    fuel: "Diesel",
-    price: "AED 72,000",
+    id: "asx",
+    name: "2024 Mitsubishi ASX GLX",
+    meta: "2024 · 5,000 km · Automatic",
+    fuel: "Petrol",
+    price: "AED 59,700",
     image:
-      "https://images.unsplash.com/photo-1580274455191-1c62238fa1c6?w=800&h=500&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1596429924638-d1f8a252df7d?w=800&h=500&fit=crop&q=80",
   },
 ];
 

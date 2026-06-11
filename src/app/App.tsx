@@ -13,7 +13,7 @@ const cars = [
   { id: 3, name: "BMW 330i M Sport", type: "Sport Sedan", price: "AED 156,000", year: "2023", km: "9,850 km", image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop&q=80", tag: "Low KM" },
   { id: 4, name: "Mercedes-Benz C-Class", type: "Executive Sedan", price: "AED 178,000", year: "2022", km: "15,700 km", image: "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&h=500&fit=crop&q=80", tag: "Warranty" },
   { id: 5, name: "Honda Civic Touring", type: "Compact Sedan", price: "AED 82,000", year: "2020", km: "42,100 km", image: "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?w=800&h=500&fit=crop&q=80", tag: "Best Value" },
-  { id: 6, name: "Hyundai Tucson Limited", type: "Urban SUV", price: "AED 118,000", year: "2023", km: "11,600 km", image: "https://images.unsplash.com/photo-1580274455191-1c62238fa1c6?w=800&h=500&fit=crop&q=80", tag: "New Arrival" },
+  { id: 6, name: "2024 Mitsubishi ASX GLX", type: "Compact SUV", price: "AED 59,700", year: "2024", km: "5,000 km", image: "https://images.unsplash.com/photo-1596429924638-d1f8a252df7d?w=800&h=500&fit=crop&q=80", tag: "New Arrival" },
 ];
 
 const thumbnails = [
@@ -84,7 +84,7 @@ function App() {
                     { name: "BMW 330i M Sport", year: "2023", price: "156,000 AED", monthly: "2,269 AED / month", specs: ["Petrol 2.0 L turbo", "Automatic", "9,850 km", "GCC Specs", "Sport Grade"] },
                     { name: "Mercedes-Benz C-Class", year: "2022", price: "178,000 AED", monthly: "2,589 AED / month", specs: ["Petrol 2.0 L turbo", "Automatic", "15,700 km", "GCC Specs", "Luxury Grade"] },
                     { name: "Honda Civic Touring", year: "2020", price: "82,000 AED", monthly: "1,193 AED / month", specs: ["Petrol 1.5 L turbo", "Automatic", "42,100 km", "GCC Specs", "Touring Grade"] },
-                    { name: "Hyundai Tucson Limited", year: "2023", price: "118,000 AED", monthly: "1,716 AED / month", specs: ["Petrol 2.0 - 2.5 L", "Automatic", "11,600 km", "GCC Specs", "Luxury Grade"] },
+                    { name: "Mitsubishi ASX GLX", year: "2024", price: "59,700 AED", monthly: "868 AED / month", specs: ["Petrol 1.5 - 2.0 L", "Automatic", "5,000 km", "GCC Specs", "Luxury Grade"] },
                   ][car.id - 1];
 
                   const specIcons = [
