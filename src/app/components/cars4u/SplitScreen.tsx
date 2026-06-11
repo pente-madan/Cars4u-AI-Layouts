@@ -40,7 +40,7 @@ export function SplitScreen() {
               maxWidth: 440,
             }}
           >
-            Find Your Perfect Premium Car
+            Find Your Perfect car
           </h2>
           <p
             className="text-center"

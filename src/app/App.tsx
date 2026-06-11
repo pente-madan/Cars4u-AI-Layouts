@@ -374,7 +374,7 @@ function App() {
                 className="font-bold text-white"
                 style={{ fontSize: 52, lineHeight: 1.15, maxWidth: 440 }}
               >
-                Find Your Perfect Car
+                Find Your Perfect Premium Cars
               </h2>
               <p
                 className="font-light text-white/75"
