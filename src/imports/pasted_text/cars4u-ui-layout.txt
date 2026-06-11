@@ -1,0 +1,231 @@
+<context>
+You are designing a complete UI layout page for Cars4U.ae — a UAE-based used car dealership. This is a Figma design file containing 6 named section frames stacked vertically on a single page. Each section will later be used as an independent component reference.
+
+Design system:
+- Primary: #BE2F33 (buttons, accents, badges, highlights, hover states)
+- Text: #000000
+- Background: #FFFFFF
+- Surface: #F5F5F5 (alternate section bg, card fills)
+- Border/Divider: #E5E7EB
+- Font: Roboto — Light 300, Regular 400, Medium 500, Bold 700
+- Base spacing unit: 8px (use multiples: 8, 16, 24, 32, 48, 64, 80, 96)
+- Corner radius: Cards 8px | Inputs 4px | Buttons 8px | Pill tags 100px
+- Shadow (cards): 0px 4px 24px rgba(0,0,0,0.08)
+- Shadow (hover): 0px 12px 32px rgba(0,0,0,0.16)
+- Frame width: 1440px desktop. Each section frame = 1440px wide, height = content-driven.
+</context>
+
+<design_rules>
+MUST follow:
+- Every section is a top-level frame named exactly: "Layout 1 — Hero", "Layout 2 — Car Grid", "Layout 3 — Car Detail", "Layout 4 — Contact Form", "Layout 5 — Why Us", "Layout 6 — Split Screen"
+- All frames use Auto Layout (vertical, fill container width)
+- All inner rows/columns use Auto Layout with exact gap and padding values specified per section
+- Every text node uses the correct Roboto weight and size specified below — never default to system font
+- Every fill color uses the exact hex values from the design system above — never approximate
+- Buttons MUST have two variants: Default and Hover state. Build as components.
+- Cards MUST have Default and Hover state (shadow deepens, card lifts by 6px translateY in prototype). Build as components.
+- Images: use image fills with the Unsplash URLs provided per section below. Scale: Fill. Clip content on.
+- Only make exactly what is specified below. Do not add unrequested elements, sections, or features.
+</design_rules>
+
+<image_fills>
+Use these exact Unsplash URLs as image fills. Set each as Image Fill > Scale: Fill.
+- Hero wide shot: https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&h=700&fit=crop&q=80
+- Toyota Land Cruiser: https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=500&fit=crop&q=80
+- Nissan Patrol / large SUV: https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=500&fit=crop&q=80
+- BMW 3 Series: https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=500&fit=crop&q=80
+- Mercedes-Benz C-Class: https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&h=500&fit=crop&q=80
+- Honda Civic: https://images.unsplash.com/photo-1614200187524-dc4b892acf16?w=800&h=500&fit=crop&q=80
+- Hyundai Tucson: https://images.unsplash.com/photo-1580274455191-1c62238fa1c6?w=800&h=500&fit=crop&q=80
+- Gallery thumb 1: https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&h=250&fit=crop&q=80
+- Gallery thumb 2: https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=250&fit=crop&q=80
+- Gallery thumb 3: https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=400&h=250&fit=crop&q=80
+- Gallery thumb 4: https://images.unsplash.com/photo-1580274455191-1c62238fa1c6?w=400&h=250&fit=crop&q=80
+- Showroom (split screen left): https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&h=900&fit=crop&q=80
+</image_fills>
+
+<sections>
+
+--- Layout 1 — Hero ---
+Frame: 1440 × 760px. Fill: #FFFFFF. Padding: 96px top/bottom, 120px left/right.
+Auto Layout: horizontal, gap 80px, align center vertically.
+
+Left column (flex 1, Auto Layout vertical, gap 24px):
+- Pill tag: Auto Layout horizontal | bg #FEF2F2 | fill text #BE2F33 | Roboto Medium 12px | uppercase | letter-spacing 1.5px | text "UAE's Trusted Car Marketplace" | padding 6px 16px | radius 100px
+- H1: "Drive Your Dream Car in the UAE" | Roboto Bold 64px | color #000000 | line-height 1.15 | max-width 580px
+- Subtext: "Explore hundreds of certified pre-owned vehicles — inspected, verified, and ready to drive." | Roboto Light 20px | color #6B7280 | line-height 1.6 | max-width 500px
+- Button row: Auto Layout horizontal, gap 16px:
+  → "Explore Cars" button: bg #BE2F33 | text white Roboto Medium 16px | padding 16px 40px | radius 8px | Hover variant: bg #9B2226
+  → "Sell My Car" button: bg transparent | border 2px #000000 | text #000000 Roboto Medium 16px | padding 16px 40px | radius 8px | Hover variant: bg #000000 text white
+
+Right column (flex 1):
+- Image frame: 600 × 420px | corner radius 16px | image fill: Hero wide shot URL | clip content on | drop shadow 0px 24px 48px rgba(0,0,0,0.12)
+- Behind image (decoration): ellipse 480×480px | fill #FEF2F2 | blur 80px | opacity 50% | positioned -40px from left/bottom of image frame, behind it in z-order
+
+--- Layout 2 — Car Grid ---
+Frame: 1440 × auto. Fill: #FFFFFF. Padding: 96px top/bottom, 120px left/right.
+Auto Layout: vertical, gap 48px.
+
+Header block (Auto Layout vertical, gap 12px, align center):
+- "Explore Our Fleet" | Roboto Bold 40px | color #000000 | text-align center
+- Accent bar: 64px × 4px | fill #BE2F33 | radius 2px | align center
+
+Grid: 3-column layout, gap 24px, fills remaining width.
+Build 6 Car Card components:
+
+Car Card component (Default + Hover variants):
+- Frame: ~380px wide, Auto Layout vertical, radius 8px, border 1px #E5E7EB, overflow hidden, bg #FFFFFF
+- Default shadow: 0px 4px 24px rgba(0,0,0,0.06)
+- Hover shadow: 0px 12px 40px rgba(0,0,0,0.14) | Y offset -6px (simulate lift via shadow/position)
+Image area:
+- Frame: full width × 220px | image fill (mapped per car below) | clip content | overflow hidden
+- Fuel badge: Auto Layout horizontal | bg #BE2F33 | text white Roboto Medium 11px | padding 4px 10px | radius 100px | absolute top-left 12px 12px
+Card body (Auto Layout vertical, gap 8px, padding 16px 20px 20px):
+- Car name: Roboto SemiBold 18px color #000000
+- Meta row: "2022 · 32,000 km · Automatic" | Roboto Regular 13px | color #9CA3AF
+- Price: "AED 285,000" | Roboto Bold 22px | color #BE2F33
+- "View Details" button: full width | border 1.5px #BE2F33 | text #BE2F33 Roboto Medium 14px | padding 10px | radius 6px | Hover: bg #BE2F33 text white
+
+Car data:
+1. Toyota Land Cruiser | 2022 | 32,000 km | Automatic | Petrol | AED 285,000 → image: Land Cruiser URL
+2. Nissan Patrol | 2021 | 48,000 km | Automatic | Diesel | AED 198,000 → image: Patrol URL
+3. BMW 3 Series | 2023 | 18,500 km | Automatic | Petrol | AED 165,000 → image: BMW URL
+4. Mercedes-Benz C-Class | 2022 | 27,000 km | Automatic | Petrol | AED 210,000 → image: Mercedes URL
+5. Honda Civic | 2023 | 12,000 km | Automatic | Petrol | AED 88,000 → image: Honda URL
+6. Hyundai Tucson | 2022 | 35,000 km | Automatic | Diesel | AED 72,000 → image: Hyundai URL
+
+--- Layout 3 — Car Detail ---
+Frame: 1440 × auto. Fill: #F5F5F5. Padding: 96px top/bottom, 120px left/right.
+Auto Layout: horizontal, gap 64px, align top.
+
+Left panel (55% width, Auto Layout vertical, gap 16px):
+- Primary image frame: full width × 420px | radius 12px | image fill: Gallery thumb 1 URL | clip content
+- Thumbnail row: Auto Layout horizontal, gap 12px, full width:
+  4 thumbnail frames each: flex 1 × 100px height | radius 8px | image fills (thumb 1–4 URLs) | clip content | cursor pointer
+  Active thumbnail: stroke 2px #BE2F33 inside
+
+Right panel (45% width, Auto Layout vertical, gap 0px):
+- Car name + year: "Toyota Land Cruiser 2022" | Roboto Bold 32px | #000000
+- Price: "AED 285,000" | Roboto Bold 26px | #BE2F33 | margin-top 4px
+- Divider: full width, 1px #E5E7EB, margin 20px 0
+- Quick stats grid (2×2 Auto Layout, gap 16px):
+  Each stat cell (Auto Layout vertical, gap 4px, bg white, padding 16px, radius 8px):
+  - Icon: emoji 24px
+  - Label: Roboto Regular 11px #9CA3AF uppercase letter-spacing 1px
+  - Value: Roboto SemiBold 15px #000000
+  Stats: 📏 Mileage / 32,000 km | ⛽ Fuel / Petrol | ⚙️ Transmission / Automatic | 🚙 Body / SUV
+- Divider 1px #E5E7EB margin 20px 0
+- Specs grid (2 columns, gap-y 12px gap-x 32px):
+  Each row: label Roboto Regular 13px #9CA3AF + value Roboto Medium 14px #000000
+  8 rows: Engine 4.0L V6 | Cylinders 6 | Color White | Doors 4 | Seats 7 | Drive 4WD | Condition Used | Registered Dubai
+- Divider 1px #E5E7EB margin 20px 0
+- "Book a Test Drive" button: full width | bg #BE2F33 | text white Roboto Medium 16px | padding 16px | radius 8px | Hover: bg #9B2226
+- "WhatsApp Enquiry" button: full width | border 2px #22C55E | text #16A34A Roboto Medium 16px | padding 16px | radius 8px | margin-top 12px | Hover: bg #22C55E text white
+- Trust badges row (Auto Layout horizontal, gap 16px, margin-top 20px):
+  3 tags: "✔ Cars4U Certified" "✔ 150-Point Inspection" "✔ Verified Docs"
+  Each: Roboto Regular 12px #6B7280
+
+--- Layout 4 — Contact Form ---
+Frame: 1440 × auto. Fill: #FFFFFF. Padding: 96px top/bottom, 120px left/right.
+Auto Layout: horizontal, gap 80px, align top.
+
+Left panel (42% width, Auto Layout vertical, gap 32px):
+- "Ready to Sell or Buy?" | Roboto Bold 36px | #000000
+- Subtext: "Fill in your details and our team will get back to you within 24 hours." | Roboto Regular 16px | #6B7280 | line-height 1.6
+- Contact list (Auto Layout vertical, gap 20px):
+  4 rows, each Auto Layout horizontal gap 16px:
+  - Icon (emoji 20px) + Text (Roboto Regular 15px #374151)
+  📍 Showroom 14, Al Quoz Industrial Area 3, Dubai, UAE
+  📞 +971 4 330 9820
+  📧 info@cars4u.ae
+  🕐 Mon–Sat: 9AM–8PM | Sun: 10AM–6PM
+- Map placeholder: full width × 200px | fill #F3F4F6 | radius 12px | centered text "📍 View on Google Maps →" Roboto Regular 14px #9CA3AF
+
+Right panel (58% width, Auto Layout vertical, gap 24px):
+- Form container bg white, padding 40px, radius 12px, shadow 0px 4px 24px rgba(0,0,0,0.06):
+  Form fields (Auto Layout vertical, gap 20px):
+
+  Input field component (Auto Layout vertical, gap 8px):
+  - Label: Roboto Medium 13px #374151
+  - Input: full width × 48px | no bg | border-bottom only 1.5px #E5E7EB | Focus variant: border-bottom 1.5px #BE2F33 | Roboto Regular 15px #000000 | padding 0 0 8px 0
+
+  Fields: Full Name | Phone Number (placeholder "+971 XX XXX XXXX") | Email Address | Message (textarea variant: full width × 120px)
+
+  Intent selector (between phone and car model):
+  - Label "I want to:" Roboto Medium 13px #374151
+  - 3 pill buttons side by side: "Buy a Car" | "Sell My Car" | "General Enquiry"
+    Default pill: border 1.5px #E5E7EB bg white text #6B7280 Roboto Medium 13px padding 10px 20px radius 100px
+    Selected pill: bg #BE2F33 border #BE2F33 text white
+
+  Conditional fields (shown when Buy or Sell selected): Car Make & Model | Budget / Expected Price AED
+
+  Submit button: full width | bg #BE2F33 | text white Roboto SemiBold 16px | padding 18px | radius 8px | Hover: bg #9B2226
+  Privacy note: "🔒 Your details are safe. We never share your information." | Roboto Regular 12px | #9CA3AF | text-align center
+
+--- Layout 5 — Why Us ---
+Frame: 1440 × auto. Fill: #F5F5F5. Padding: 96px top/bottom, 120px left/right.
+Auto Layout: vertical, gap 48px.
+
+Header (Auto Layout vertical, gap 12px, align center):
+- "Why Choose Cars4U?" | Roboto Bold 40px | #000000 | text-align center
+- Accent bar: 64px × 4px | fill #BE2F33 | radius 2px
+
+4-column card grid, gap 24px:
+Card component (Default + Hover variants):
+- Frame: flex 1, Auto Layout vertical, gap 16px, padding 32px, bg white, radius 12px, border 1px #E5E7EB
+- Default: shadow 0px 2px 8px rgba(0,0,0,0.04)
+- Hover: border-top 3px #BE2F33 shadow 0px 8px 32px rgba(0,0,0,0.10)
+- Icon: 48px × 48px, emoji text-align center, Roboto Regular 32px
+- Title: Roboto SemiBold 18px #000000
+- Description: Roboto Regular 14px #6B7280 line-height 1.6
+
+Card content:
+1. 🔍 Thoroughly Inspected | Every car passes a 150-point mechanical check before listing
+2. 📋 Clear Documentation | Full history, no hidden fees, transparent pricing always
+3. 💬 Expert Guidance | Our team helps you find the right car, not just any car
+4. 🔄 Easy Trade-ins | Sell your car and upgrade in one seamless visit
+
+Trust stats bar (Auto Layout horizontal, fill #FFFFFF, full width, padding 40px 120px, border-top 1px #E5E7EB):
+4 stat cells separated by 1px #E5E7EB vertical dividers:
+Each cell (Auto Layout vertical, gap 6px, align center, flex 1):
+- Stat: Roboto Bold 32px #000000
+- Label: Roboto Regular 14px #6B7280
+Stats: "500+" Cars Available | "10,000+" Happy Customers | "2010" Trusted Since | "#1" Dubai's Top Dealer
+
+--- Layout 6 — Split Screen ---
+Frame: 1440 × 800px. Fill: none. No padding.
+Auto Layout: horizontal. Each panel = 50% width.
+
+Left panel (720 × 800px):
+- Background: image fill Showroom URL | scale: fill
+- Dark overlay layer: 720 × 800px rectangle | fill #000000 | opacity 60% | on top of image
+- Content layer (Auto Layout vertical, gap 24px, padding 80px, justify center, full height) on top of overlay:
+  - "Find Your Perfect Car" | Roboto Bold 52px | #FFFFFF | line-height 1.15 | max-width 440px
+  - Subtext | Roboto Light 18px | rgba(255,255,255,0.75) | max-width 380px | line-height 1.6
+  - CTA button: "Explore Cars →" | border 2px #FFFFFF | text #FFFFFF Roboto Medium 16px | padding 16px 40px | radius 8px | Hover: bg #FFFFFF text #000000
+
+Right panel (720 × 800px):
+- Background fill: #BE2F33
+- Decorative circle: 480×480px ellipse | fill #9B2226 | opacity 40% | positioned bottom-right -80px overflow
+- Content layer (Auto Layout vertical, gap 24px, padding 80px, justify center, full height):
+  - "Get the Best Price for Your Car" | Roboto Bold 52px | #FFFFFF | line-height 1.15 | max-width 440px
+  - Subtext | Roboto Light 18px | rgba(255,255,255,0.75) | max-width 380px | line-height 1.6
+  - CTA button: "Sell My Car →" | border 2px #FFFFFF | text #FFFFFF Roboto Medium 16px | padding 16px 40px | radius 8px | Hover: bg #FFFFFF text #BE2F33
+
+Center divider (absolute, centered between panels, full height):
+- Vertical line: 1px × 200px | fill rgba(255,255,255,0.25) | positioned vertically centered
+- "OR" badge: 36×36px circle | fill #FFFFFF | text "OR" Roboto Bold 11px #000000 | shadow 0px 2px 8px rgba(0,0,0,0.15) | centered on vertical line
+- Vertical line: 1px × 200px below badge
+
+</sections>
+
+<output_rules>
+- Build all 6 frames as described. Nothing more, nothing less.
+- Name every frame, component, layer, and group exactly as specified.
+- Apply Roboto font to every single text node. Do not use system default.
+- All components (buttons, cards, inputs) must have clearly named variants: Default, Hover, Active where specified.
+- Apply Auto Layout to every container — no manual absolute positioning except decorative elements.
+- Align all 6 section frames left-aligned on the canvas, stacked vertically with 48px gap between each frame.
+- After building, create one local Color Style for each design system color named: Primary, Black, White, Surface, Border, TextMuted.
+- Create Text Styles for: H1, H2, Body-Large, Body, Body-Small, Caption, Button, Label.
+</output_rules>
