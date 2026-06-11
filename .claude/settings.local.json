@@ -15,7 +15,8 @@
       "Bash(npm run *)",
       "Bash(taskkill /F /PID 23476)",
       "Bash(taskkill /F /PID 1412)",
-      "Bash(netstat -ano)"
+      "Bash(netstat -ano)",
+      "Bash(npx tsc *)"
     ],
     "additionalDirectories": [
       "D:\\Cars4u-ai-layouts\\.git"
