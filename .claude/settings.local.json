@@ -7,7 +7,9 @@
       "Bash(git commit *)",
       "Bash(git remote *)",
       "Bash(git branch *)",
-      "Bash(rm -f .git/index.lock && git add -A && git commit -m \"Initial commit - Cars4U AI Layouts React project\" && git remote add origin https://github.com/pente-madan/Cars4u-AI-Layouts.git && git branch -M main)"
+      "Bash(rm -f .git/index.lock && git add -A && git commit -m \"Initial commit - Cars4U AI Layouts React project\" && git remote add origin https://github.com/pente-madan/Cars4u-AI-Layouts.git && git branch -M main)",
+      "Bash(git push *)",
+      "Bash(git checkout *)"
     ],
     "additionalDirectories": [
       "D:\\Cars4u-ai-layouts\\.git"
