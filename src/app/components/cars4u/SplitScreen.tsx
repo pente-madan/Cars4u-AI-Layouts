@@ -27,10 +27,11 @@ export function SplitScreen() {
           style={{ background: colors.black, opacity: 0.6 }}
         />
         <div
-          className="relative flex flex-col justify-center gap-6 h-full"
+          className="relative flex flex-col justify-center items-center gap-6 h-full"
           style={{ padding: 80, minHeight: 400 }}
         >
           <h2
+            className="text-center"
             style={{
               color: colors.white,
               fontWeight: 700,
@@ -42,6 +43,7 @@ export function SplitScreen() {
             Find Your Perfect Car
           </h2>
           <p
+            className="text-center"
             style={{
               color: "rgba(255,255,255,0.75)",
               fontWeight: 300,
@@ -56,7 +58,6 @@ export function SplitScreen() {
           <button
             onMouseEnter={() => setLeftHover(true)}
             onMouseLeave={() => setLeftHover(false)}
-            className="self-start"
             style={{
               border: `2px solid ${colors.white}`,
               background: leftHover ? colors.white : "transparent",
@@ -91,10 +92,11 @@ export function SplitScreen() {
           }}
         />
         <div
-          className="relative flex flex-col justify-center gap-6 h-full"
+          className="relative flex flex-col justify-center items-center gap-6 h-full"
           style={{ padding: 80, minHeight: 400 }}
         >
           <h2
+            className="text-center"
             style={{
               color: colors.white,
               fontWeight: 700,
@@ -106,6 +108,7 @@ export function SplitScreen() {
             Get the Best Price for Your Car
           </h2>
           <p
+            className="text-center"
             style={{
               color: "rgba(255,255,255,0.75)",
               fontWeight: 300,
@@ -120,7 +123,6 @@ export function SplitScreen() {
           <button
             onMouseEnter={() => setRightHover(true)}
             onMouseLeave={() => setRightHover(false)}
-            className="self-start"
             style={{
               border: `2px solid ${colors.white}`,
               background: rightHover ? colors.white : "transparent",

@@ -366,19 +366,19 @@ function App() {
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
             {/* Dark overlay 60% */}
-            <div className="absolute inset-0 bg-black/60 bg-[#000000b8]" />
+            <div className="absolute inset-0 bg-black/80" />
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col gap-6 p-[80px]">
+            <div className="relative z-10 flex flex-col items-center gap-6 p-[80px] text-center">
               <h2
-                className="max-w-[440px] font-bold text-white"
-                style={{ fontSize: 52, lineHeight: 1.15 }}
+                className="font-bold text-white"
+                style={{ fontSize: 52, lineHeight: 1.15, maxWidth: 440 }}
               >
                 Find Your Perfect Car
               </h2>
               <p
-                className="max-w-[380px] font-light text-white/75"
-                style={{ fontSize: 18, lineHeight: 1.6 }}
+                className="font-light text-white/75"
+                style={{ fontSize: 18, lineHeight: 1.6, maxWidth: 380 }}
               >
               bg-[#000000c4]   Browse hundreds of certified pre-owned vehicles — inspected, verified, and priced fairly for the UAE market.
               </p>
@@ -393,25 +393,7 @@ function App() {
             </div>
           </div>
 
-          {/* CENTER DIVIDER — absolute, spanning full height, centered between panels */}
-          <div className="pointer-events-none absolute inset-y-0 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center justify-center lg:flex" style={{ width: 1 }}>
-            {/* Top line */}
-            <div className="w-px flex-none" style={{ height: 200, background: "rgba(255,255,255,0.25)" }} />
-            {/* OR badge */}
-            <div
-              className="my-0 flex flex-none items-center justify-center rounded-full bg-white"
-              style={{
-                width: 36,
-                height: 36,
-                boxShadow: "0px 2px 8px rgba(0,0,0,0.15)",
-              }}
-            >
-              <span className="font-['Roboto'] text-[11px] font-bold text-black">OR</span>
-            </div>
-            {/* Bottom line */}
-            <div className="w-px flex-none" style={{ height: 200, background: "rgba(255,255,255,0.25)" }} />
-          </div>
-
+          
           {/* RIGHT PANEL — red background + decorative circle + content */}
           <div className="relative flex w-full flex-1 flex-col justify-center overflow-hidden bg-[#BE2F33] lg:w-1/2">
             {/* Decorative circle — bottom-right overflow */}
@@ -429,16 +411,16 @@ function App() {
             />
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col gap-6 p-[80px]">
+            <div className="relative z-10 flex flex-col items-center gap-6 p-[80px] text-center">
               <h2
-                className="max-w-[440px] font-bold text-white"
-                style={{ fontSize: 52, lineHeight: 1.15 }}
+                className="font-bold text-white"
+                style={{ fontSize: 52, lineHeight: 1.15, maxWidth: 440 }}
               >
                 Get the Best Price for Your Car
               </h2>
               <p
-                className="max-w-[380px] font-light text-white/75"
-                style={{ fontSize: 18, lineHeight: 1.6 }}
+                className="font-light text-white/75"
+                style={{ fontSize: 18, lineHeight: 1.6, maxWidth: 380 }}
               >
                 Get a transparent, showroom-grade valuation from Cars4U.ae specialists — fast payout, zero hassle, Dubai-based.
               </p>
